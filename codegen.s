@@ -61,7 +61,7 @@ codegen:
     addi sp, sp, 4
     lw t1, 0(sp)
     addi sp, sp, 4
-    div t0, t0, t1
+    div t0, t1, t0
     sw t0, -4(sp)
     addi sp, sp, -4
 
