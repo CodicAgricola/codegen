@@ -17,13 +17,34 @@ codegen:
     sw s11, -48(s0)
     addi sp, s0, -48
 
-    li t0, 1
+    li t0, 4
+    sw t0, -4(sp)
+    addi sp, sp, -4
+
+    lw t0, -52(s0)
     sw t0, -4(sp)
     addi sp, sp, -4
     li t0, 2
     sw t0, -4(sp)
     addi sp, sp, -4
+    lw t0, 0(sp)
+    addi sp, sp, 4
+    lw t1, 0(sp)
+    addi sp, sp, 4
+    sub t0, t1, t0
+    sw t0, -4(sp)
+    addi sp, sp, -4
+    lw t0, -52(s0)
+    sw t0, -4(sp)
+    addi sp, sp, -4
     li t0, 1
+    sw t0, -4(sp)
+    addi sp, sp, -4
+    lw t0, 0(sp)
+    addi sp, sp, 4
+    lw t1, 0(sp)
+    addi sp, sp, 4
+    sub t0, t1, t0
     sw t0, -4(sp)
     addi sp, sp, -4
     lw t0, 0(sp)
@@ -33,39 +54,8 @@ codegen:
     mul t0, t0, t1
     sw t0, -4(sp)
     addi sp, sp, -4
-    lw t0, 0(sp)
-    addi sp, sp, 4
-    lw t1, 0(sp)
-    addi sp, sp, 4
-    add t0, t0, t1
-    sw t0, -4(sp)
-    addi sp, sp, -4
 
-    lw t0, -52(s0)
-    sw t0, -4(sp)
-    addi sp, sp, -4
-    li t0, 3
-    sw t0, -4(sp)
-    addi sp, sp, -4
-    lw t0, 0(sp)
-    addi sp, sp, 4
-    lw t1, 0(sp)
-    addi sp, sp, 4
-    add t0, t0, t1
-    sw t0, -4(sp)
-    addi sp, sp, -4
-    li t0, 2
-    sw t0, -4(sp)
-    addi sp, sp, -4
-    lw t0, 0(sp)
-    addi sp, sp, 4
-    lw t1, 0(sp)
-    addi sp, sp, 4
-    div t0, t1, t0
-    sw t0, -4(sp)
-    addi sp, sp, -4
-
-    li t0, 26
+    li t0, 27
     sw t0, -4(sp)
     addi sp, sp, -4
     li t0, 1
@@ -102,7 +92,7 @@ codegen:
     lw ra, 0(sp)
     addi sp, sp, 4
 
-    li t0, 26
+    li t0, 27
     sw t0, -4(sp)
     addi sp, sp, -4
     li t0, 0
