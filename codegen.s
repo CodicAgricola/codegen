@@ -57,6 +57,13 @@ codegen:
     li t0, 2
     sw t0, -4(sp)
     addi sp, sp, -4
+    lw t0, 0(sp)
+    addi sp, sp, 4
+    lw t1, 0(sp)
+    addi sp, sp, 4
+    div t0, t0, t1
+    sw t0, -4(sp)
+    addi sp, sp, -4
 
     li t0, 26
     sw t0, -4(sp)
