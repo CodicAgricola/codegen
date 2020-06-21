@@ -72,7 +72,7 @@ codegen:
     addi sp, sp, -4
     jal ra, digitalWrite
     lw ra, 0(sp)
-    addi sp sp, 4
+    addi sp, sp, 4
 
     lw t0, -52(s0)
     sw t0, -4(sp)
@@ -93,7 +93,7 @@ codegen:
     addi sp, sp, -4
     jal ra, delay
     lw ra, 0(sp)
-    addi sp sp, 4
+    addi sp, sp, 4
 
     li t0, 26
     sw t0, -4(sp)
@@ -109,7 +109,7 @@ codegen:
     addi sp, sp, -4
     jal ra, digitalWrite
     lw ra, 0(sp)
-    addi sp sp, 4
+    addi sp, sp, 4
 
     lw t0, -56(s0)
     sw t0, -4(sp)
@@ -130,7 +130,7 @@ codegen:
     addi sp, sp, -4
     jal ra, delay
     lw ra, 0(sp)
-    addi sp sp, 4
+    addi sp, sp, 4
 
 
     lw s11, -48(s0)
